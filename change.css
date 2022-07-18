@@ -1,0 +1,12 @@
+P {
+    color:black;
+}
+
+p {
+    background-color: yellow;
+    display: inline-block;
+}
+
+table {
+    background-color: blue;
+}
