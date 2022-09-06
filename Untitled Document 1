@@ -1,0 +1,22 @@
+Consti
+
+insert into Consti values('c1', 'Puttur', 'Karnataka', 500);
+insert into Consti values('c2', 'Bengaluru', 'Karnataka', 50009);
+insert into Consti values('c3', 'Mardala', 'Maharashtra', 5230);
+insert into Consti values('c4', 'Bandala', 'Karnataka', 200);
+insert into Consti values('c5', 'Chandevala', 'AP', 1500);
+insert into Consti values('c6', 'Ragursala', 'AP', 2500);
+insert into Consti values('c7', 'Barmapur', 'Bihar', 100);
+insert into Consti values('c8', 'Badlapur', 'MP', 220);
+
+Party
+
+insert into Party values('p1', 'BJP', 'Lotus');
+insert into Party values('p2', 'JDS', 'Women');
+insert into Party values('p3', 'CONG', 'Hashtha');
+insert into Party values('p4', 'ANIME', 'Luffy');
+insert into Party values('p5', 'AAP', 'Porake');
+
+Candidate
+
+insert into Candidate values('1', 'Soorya', 8073430217, 21, 'KARNATAKA', '
