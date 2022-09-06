@@ -19,4 +19,44 @@ insert into Party values('p5', 'AAP', 'Porake');
 
 Candidate
 
-insert into Candidate values('1', 'Soorya', 8073430217, 21, 'KARNATAKA', '
+insert into Candidate values('1', 'Soorya', 80734302, 21, 'KARNATAKA', 'p1', 'c1');
+insert into Candidate values('2', 'Meghana', 807343, 21, 'KARNATAKA', 'p2', 'c1');
+insert into Candidate values('3', 'Rithesh', 734302, 21, 'KARNATAKA', 'p1', 'c2');
+insert into Candidate values('4', 'Rakshith', 80244302, 21, 'KARNATAKA', 'p3', 'c2');
+insert into Candidate values('5', 'Mokshith', 86734302, 21, 'Maharashtra', 'p4', 'c3');
+insert into Candidate values('6', 'Chandana', 60734512, 21, 'Maharashtra', 'p5', 'c3');
+insert into Candidate values('7', 'Ram', 70734772, 21, 'AP', 'p5', 'c5');
+
+
+
+Contest
+
+insert into Contest values('c1', '1', 'p1');
+insert into Contest values('c2', '1', 'p1');
+insert into Contest values('c3', '1', 'p1');
+insert into Contest values('c4', '1', 'p1');
+insert into Contest values('c5', '1', 'p1');
+insert into Contest values('c7', '1', 'p1');
+insert into Contest values('c8', '1', 'p1');
+insert into Contest values('c1', '2', 'p2');
+insert into Contest values('c2', '2', 'p2');
+insert into Contest values('c3', '3', 'p3');
+
+
+Voter
+
+insert into Voter values('v1', 'Soorya', '21', 'h1', 'Puttur', 'KARNATAKA', '574203', 'c1');
+insert into Voter values('v2', 'Rithesh', '21', 'h2', 'Mardala', 'KARNATAKA', '572303', 'c2');
+insert into Voter values('v3', 'Mokshith', '21', 'h3', 'Mardala', 'Maharashtra', '571203', 'c3');
+insert into Voter values('v4', 'Chandana', '22', 'h4', 'Mardala', 'Maharashtra', '474203', 'c3');
+insert into Voter values('v5', 'Thaniyappa', '41', 'h5', 'Puttur', 'KARNATAKA', '556203', 'c1');
+insert into Voter values('v6', 'Swasthik', '31', 'h6', 'Puttur', 'KARNATAKA', '574244', 'c1');
+insert into Voter values('v7', 'Dhanush', '41', 'h7', 'Bengaluru', 'KARNATAKA', '564203', 'c2');
+insert into Voter values('v8', 'Manoj', '11', 'h8', 'Bengaluru', 'KARNATAKA', '574743', 'c2');
+insert into Voter values('v9', 'Ragu', '51', 'h9', 'Chandevala', 'AP', '574743', 'c5');
+insert into Voter values('v10', 'Manu', '51', 'h9', 'Chandevala', 'AP', '574743', 'c5');
+
+
+select *
+from Candidate
+where candid in (select cid from Contest where candid in (select cid from Contest group by candid having count(*) > 1);
